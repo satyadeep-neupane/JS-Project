@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<div id="menu">
+			<nav>
+				<span><button type="button" onclick="displayMenu(1)">File</button></span>
+				<ul id="sub-menu">
+					<li onclick="showPopup(1)"><a href="#">Help</a></li>
+					<li onclick="clearHistory()"><a href="#">Clear History</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id="title">
+			<h3>History</h3>
+		</div>
+		<div class="clear"></div>
+		<div id="calculator">
+			<div id="display">
+				<p id="syntax">0</p>
+				<p id="result">0</p>
+			</div>
+
+			<div id="keyboard">
+				<table cellspacing="0" cellpadding="0" border="1">
+					<tr>
+						<td><button type="button" class="key1" value="C">C</button></td>
+						<td><button type="button" class="key1" value="/">/</button></td>
+						<td><button type="button" class="key1" value="*">*</button></td>
+						<td><button type="button" class="key1" value="-">-</button></td>
+					</tr>
+					<tr>
+						<td><button type="button" class="key1" value="7">7</button></td>
+						<td><button type="button" class="key1" value="8">8</button></td>
+						<td><button type="button" class="key1" value="9">9</button></td>
+						<td rowspan="2"><button type="button" class="key2" value="+">+</button></td>
+					</tr>
+					<tr>
+						<td><button type="button" class="key1" value="4">4</button></td>
+						<td><button type="button" class="key1" value="5">5</button></td>
+						<td><button type="button" class="key1" value="6">6</button></td>
+					</tr>
+					<tr>
+						<td><button type="button" class="key1" value="1">1</button></td>
+						<td><button type="button" class="key1" value="2">2</button></td>
+						<td><button type="button" class="key1" value="3">3</button></td>
+						<td rowspan="2"><button type="button" class="key2" value="=">=</button></td>
+					</tr>
+					<tr>
+						<td colspan="2"><button type="button" class="key3" value="0">0</button></td>
+						<td><button type="button" class="key1" value=".">.</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div id="history">
+		
+		</div>
+
+		<div class="clear"></div>
+
+
+		<div id="popup">
+			<h3>Welcome User</h3>
+			<br>
+			<p>
+				This is designed for demo purpose only. Please prefer <u>firefox</u> for better quality.
+				<br><br>
+				Note: <br>
+				The 'C' button works as delete button as well as clear button based on state. Feel free to reach us in case of any issue. <br>
+				Thank You !!! 
+			</p>
+			<br>
+		</div>
+	</div>
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="calculate.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<script type="text/javascript">
+	let dispResult = false;
+	let history;
+	let menuShown = 0;
+	let popupShown = 0;
+	let interval;
+
+	(function(){
+		getHistory();
+		setTimeout(showPopup, 5000);
+		
+		document.getElementById('keyboard').addEventListener('click', function(e){
+			if(e.target.localName == "button"){
+		    	if(e.target.value == 'C')
+		    		clearResult(syntax, dispResult)
+		    	else if(e.target.value == '=')
+		    		calculateResult();
+		    	else
+					createSyntax(e.target.value);
+			}
+		})
+	})();
+</script>
+</body>
+</html>
