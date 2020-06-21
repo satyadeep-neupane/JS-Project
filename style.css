@@ -1,0 +1,157 @@
+*{
+			margin: 0;
+			padding: 0;
+			font-size: 28px;
+		}
+
+		.key1{
+			margin: 0;
+			width: 100%;
+			height: 40px;
+		}
+
+		.key2{
+			margin: 0;
+			width: 100%;
+			height: 80px;
+		}
+
+		.key3{
+			margin: 0;
+			width: 100%;
+			height: 40px;
+		}
+
+		#display{
+			height: 50px;
+			width: 200px;
+		}
+
+		#app{
+			width: 350px;
+			height: 100%;
+			margin: auto;
+			border: solid;
+			position: relative;
+		}
+
+		#menu{
+			width: 200px;
+			font-size: 24px;
+			background: #09ebdf;
+			color: white;
+			float: left;
+		}
+
+		#title{
+			float: left;
+			width: 150px;
+			justify-content: center;
+			background-color: #6176ba;
+			height: 36px;
+		}
+
+		#menu ul li{
+			list-style: none;
+			font-size: 16px;
+		}
+
+		#menu span{
+			//text-decoration: underline;
+			position: relative;
+		}
+
+		#menu span button{
+			background-color: #6332cf;
+			color: white;
+			margin: 5px;
+			font-size: 18px;
+			width: 50px;
+		}
+		
+		#menu ul{
+			background-color: #6332cf; 
+			position: absolute;
+			display: none;
+		}
+
+		#menu ul li:hover{
+			color: red;
+		}
+
+		#history{
+			background-color: #8493c4;
+			height: 260px;
+			width: 150px;
+			float: left;
+			font-size: 16px;
+			text-align: right;
+/*			margin-right: 1px;*/
+		}
+
+		#history div p{
+			margin-right: 5px;
+			font-size: 16px;
+			color: white;
+		}
+
+		#history div p span{
+			font-size: 14px;
+		}
+
+		table{
+			width: 200px;
+		}
+
+		#calculator{
+			width: 200px;
+			float: left;
+		}
+
+		.clear{
+			clear: both;
+		}
+
+		#display p{
+			margin: 1px;
+			width: 190px;
+			text-align: right;
+		}
+
+		#syntax{
+			/*font-size: 24px;*/
+			font-size: 18px;
+		}
+
+		#result{
+			/*font-size: 18px;*/
+			font-size: 24px;
+		}
+
+		#popup{
+			position: absolute;
+			height: 100%;
+			top: 0%;
+			background-color: #ff6bce;
+			text-align: center;
+			padding: 0px 10px;
+			display: none;
+		}
+
+		#popup *{
+			font-size: 18px;
+		}
+
+		#popup h3{
+			font-size: 28px;
+		}
+
+		#menu nav ul li a{
+			text-decoration: none;
+			color: white;
+			font-size: 16px;
+		}
+
+		#menu nav ul li a:hover{
+			color: red;
+		}
